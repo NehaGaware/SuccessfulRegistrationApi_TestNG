@@ -17,7 +17,7 @@ public class Post_req_repository {
 	
 	public static String post_resource() 
 	{
-		String resource ="/api/users";
+		String resource ="api/register";
 		return resource;
 	}
 	
@@ -28,46 +28,10 @@ public class Post_req_repository {
 		String req_name=data.get(1);
 		String req_job=data.get(2);
 		String requestbody="{\r\n"
-				+ "    \"name\": \""+req_name+"\",\r\n"
-				+ "    \"job\": \""+req_job+"\"\r\n"
+				+ "    \"email\": \"eve.holt@reqres.in\",\r\n"
+				+ "    \"password\": \"pistol\"\r\n"
 				+ "}";
 		return requestbody;
 	}
-
-public static String post_req_tc2() throws IOException 
-{
-	ArrayList<String> data=Utility_CommonFunctions.readdataexcel("Post_Test_Data", "Post_tc_2");
-	String req_name=data.get(1);
-	String req_job=data.get(2);
-	String requestbody="{\r\n"
-			+ "    \"name\": \""+req_name+"\",\r\n"
-			+ "    \"job\": \""+req_job+"\"\r\n"
-			+ "}";
-	return requestbody;
-}
-
-public static String post_req_tc3() throws IOException 
-{
-	ArrayList<String> data=Utility_CommonFunctions.readdataexcel("Post_Test_Data", "Post_tc_3");
-	String req_name=data.get(1);
-	String req_job=data.get(2);
-	String requestbody="{\r\n"
-			+ "    \"name\": \""+req_name+"\",\r\n"
-			+ "    \"job\": \""+req_job+"\"\r\n"
-			+ "}";
-	return requestbody;
-}
-
-public static String post_req_tc4() throws IOException 
-{
-	ArrayList<String> data=Utility_CommonFunctions.readdataexcel("Post_Test_Data", "Post_tc_4");
-	String req_name=data.get(1);
-	String req_job=data.get(2);
-	String requestbody="{\r\n"
-			+ "    \"name\": \""+req_name+"\",\r\n"
-			+ "    \"job\": \""+req_job+"\"\r\n"
-			+ "}";
-	return requestbody;
-}
 }
 
